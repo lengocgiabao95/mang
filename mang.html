@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <input type="text" id="element">
+    <input type="button" value="add" onclick=add_element()>
+    <input type="button" value="display" onclick=display()>
+    <div id= 'result'></div>
+    <script>
+        let arr = Array() ;
+        let x = 0 ;
+        function add_element() {
+            arr[x] = document.getElementById('element').value;
+            alert(' gia tri ' + arr[x] + ' phan tu ' + x);
+            x++;
+            document.getElementById('element').value="";
+            
+            
+        }
+        function display() {
+            let a = "<hr/>" ;
+            
+            for( i = 0 ; i<arr.length ; i++ ) {
+                a += " Element " + i + " = " + arr[i] + '<br/>';
+               
+                
+            }
+            document.getElementById('result').innerHTML = a;
+           
+        }
+    </script>
+    
+
+
+
+</body>
+</html>
